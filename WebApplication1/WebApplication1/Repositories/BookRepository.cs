@@ -122,7 +122,7 @@ public class BookRepository
             {
                 command.Parameters.Clear();
                 command.CommandText = "insert into books_genres values (@bookId,@genreId)";
-                command.Parameters.AddWithValue("@bookId", genreId);
+                command.Parameters.AddWithValue("@bookId", id);
                 command.Parameters.AddWithValue("@genreId", genreId);
 
                 await command.ExecuteNonQueryAsync();
